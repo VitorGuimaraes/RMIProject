@@ -1,0 +1,26 @@
+-Instalar Pyro4 no Windows:
+cd C:\Python27\Scripts
+pip install Pyro4
+
+
+* LISTA DE COMANDOS
+-Inicar namingserver:
+Localhost:
+python -m Pyro4.naming
+
+Em rede:
+pyro4-ns -n your_hostname # (192.168.0.1)
+
+
+-Listar objetos registrados no namingserver:
+python -m Pyro4.nsc list
+
+#######################################################
+
+* Como executar o projeto *
+-Inicie o namingserver no terminal com um dos comandos:
+python -m Pyro4.naming	  (para localhost)
+pyro4-ns -n your_hostname (em rede. Precisa colocar o IP)
+
+-Execute o gameserver.py
+-Execute player.py em dois terminais diferentes

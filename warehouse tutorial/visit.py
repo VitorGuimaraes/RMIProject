@@ -1,0 +1,11 @@
+import sys
+import Pyro4
+from person import Person
+
+sys.excepthook = Pyro4.util.excepthook
+
+warehouse = Pyro4.Proxy("PYRONAME:example.warehouse")
+janet = Person("Janet")
+henry = Person("Henry")
+janet.visit(warehouse)
+henry.visit(warehouse)
